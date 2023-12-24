@@ -8,6 +8,9 @@ var connectionString = builder.Configuration.GetConnectionString("SQlServer");
 builder.Services.AddDbContext<MyDbContext>
     (options => options.UseSqlServer(connectionString));
 
+// Register ExcelDataImporter as a transient service
+builder.Services.AddTransient<ExcelDataImporter>();
+
 // Add services to the container.
 
 builder.Services.AddControllers();

@@ -35,8 +35,9 @@ namespace InfoGraphX_API.Migrations
                     b.Property<float>("ImportUniteValue")
                         .HasColumnType("real");
 
-                    b.Property<int>("Month")
-                        .HasColumnType("int");
+                    b.Property<string>("Month")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Year")
                         .HasColumnType("int");
@@ -44,6 +45,35 @@ namespace InfoGraphX_API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ForeignTradeValueIndices");
+                });
+
+            modelBuilder.Entity("InfoGraphX_API.Models.HappinessLevelByAgeGroup", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AgeGroup")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("Happy")
+                        .HasColumnType("real");
+
+                    b.Property<float>("Medium")
+                        .HasColumnType("real");
+
+                    b.Property<float>("UnHappy")
+                        .HasColumnType("real");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HappinessLevelByAgeGroups");
                 });
 
             modelBuilder.Entity("InfoGraphX_API.Models.User", b =>
