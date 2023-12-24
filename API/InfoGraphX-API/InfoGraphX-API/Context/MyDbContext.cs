@@ -16,6 +16,7 @@ namespace InfoGraphX_API.Context
 
         public DbSet<User> Users { get; set; }
         public DbSet<ForeignTradeValueIndice> ForeignTradeValueIndices { get; set; }
+        public DbSet<HappinessLevelByAgeGroup> HappinessLevelByAgeGroups { get; set; }
 
 
 
