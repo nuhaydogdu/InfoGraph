@@ -3,6 +3,7 @@ using InfoGraphX_API.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoGraphX_API.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231228125052_umut_ikinci")]
+    partial class umut_ikinci
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,34 +48,6 @@ namespace InfoGraphX_API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ForeignTradeValueIndices");
-                });
-
-            modelBuilder.Entity("InfoGraphX_API.Models.HappinesRates", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("AgeInterval")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("HappinesRatesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("HappyRate")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MediumRate")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UpsetRate")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("HappinesRates");
                 });
 
             modelBuilder.Entity("InfoGraphX_API.Models.HappinessLevelByAgeGroup", b =>

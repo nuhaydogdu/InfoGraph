@@ -18,22 +18,22 @@ namespace InfoGraphX_API.Controllers
         [HttpPost("importFTVI")]
         public IActionResult ImportFTVIExcelData()
         {
-            var excelFilePath = "C:/Users/nuhay/Downloads/FTVI.xls";
+            var excelFilePath = "C:/Users/Umut/Downloads/FTVI.xls";
             _excelDataImporter.ImportFTVIDataFromExcel(excelFilePath);
 
             return Ok("FTVIE Data import successful");
         }
 
 
-        ////Happiness level by age group
-        //[HttpPost("importHLBAG")]
-        //public IActionResult ImportHLBAGExcelData()
-        //{
-        //    var excelFilePath = "C:/Users/nuhay/Downloads/HLBAG.xls";
-        //    _excelDataImporter.ImportHLBAGDataFromExcel(excelFilePath);
+        //Happiness level by age group
+        [HttpPost("HappinessExcel")]
+        public IActionResult ImportHLBAGExcelData()
+        {
+            var excelFilePath = "C:/Users/Umut/Downloads/HLBAG.xls";
+            _excelDataImporter.ImportHLBAGDataFromExcel(excelFilePath);
 
-        //    return Ok("HLBAG Data import successful");
-        //}
+            return Ok("HLBAG Data import successful");
+        }
 
     }
 }
