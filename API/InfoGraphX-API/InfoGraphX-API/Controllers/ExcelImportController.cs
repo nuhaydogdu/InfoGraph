@@ -35,5 +35,14 @@ namespace InfoGraphX_API.Controllers
             return Ok("HLBAG Data import successful");
         }
 
+        //TUFE level by age group
+        [HttpPost("ImportTufe")]
+        public IActionResult ImportTUFEExcelData()
+        {
+            var excelFilePath = "C:/Users/Umut/Downloads/TUFE.xls";
+            _excelDataImporter.ImportTUFEDataFromExcel(excelFilePath);
+
+            return Ok("TUFE Data import successful");
+        }
     }
 }
