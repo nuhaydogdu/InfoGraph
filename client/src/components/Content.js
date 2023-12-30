@@ -3,7 +3,7 @@ import {Container, Row, Col} from "react-bootstrap";
 
 function Content() {
   return (
-    <Container className='p-3'>
+    <Container className='custom-container p-3'>
         <Row>
             <Col>Content</Col>
         </Row>

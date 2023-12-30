@@ -1,8 +1,9 @@
 import React from 'react'
+import '../App.css'
 import {Container, Row, Col} from "react-bootstrap";
 function Navbar() {
   return (
-    <Container className='p-3'>
+    <Container className='custom-container mb-3 p-3'>
         <Row>
             <Col>
                 Navbar
