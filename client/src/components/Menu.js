@@ -8,7 +8,7 @@ function Menu() {
         "Deneme3"
     ])
   return (
-    <Container className='custom-container'>
+    <Container className='custom-container h-100'>
         <Row>
             <Col className='p-3'>
                     <h5 className='menu-baslik'><strong>MENÜ</strong></h5>
