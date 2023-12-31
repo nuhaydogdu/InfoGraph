@@ -7,13 +7,17 @@ import Content from "./components/Content";
 
 function App() {
   return (
-    <Container>
-      <Row className="custom-container mb-3">
+    <Container className="mt-3">
+
+      {/* navbar */}
+      <Row>
         <Col>
           <Navbar />
         </Col>
       </Row>
-      <Row className="custom-container mb-3">
+
+      {/* content and menu */}
+      <Row className="mb-3">
         <Col sm={3}>
           <Menu />
         </Col>
@@ -21,7 +25,9 @@ function App() {
           <Content />
         </Col>
       </Row>
-      <Row className="custom-container mb-3">
+
+      {/* footer */}
+      <Row>
         <Col>
           <Footer />
         </Col>
