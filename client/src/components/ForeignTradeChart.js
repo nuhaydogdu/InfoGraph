@@ -1,15 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import Chart from "react-apexcharts";
-import { resdata } from "./resdata";
+import { resdata } from "../resData/resdataIndex";
 
 function Graphics() {
-
+  console.log(resdata);
   const groupedData = {};
 
   resdata.forEach((item) => {
-    const year = item.happinessData.year;
+    const year = item.year;
 
     // Eğer obje içinde bu yıl yoksa, bir dizi oluştur
     if (!groupedData[year]) {
@@ -26,55 +26,27 @@ function Graphics() {
         chart: {
           id: `basic-bar-${year}`,
         },
+        dataLabels: {
+          enabled: false,
+        },
         xaxis: {
-          categories: groupedData[year].map((item) => item["ratesData"]["ageInterval"]),
+          categories: groupedData[year].map((item) => item["month"]),
         },
       },
       series: [
         {
-          name: "happyRate",
-          data: groupedData[year].map((item) => item["ratesData"]["happyRate"]),
+          name: "exportUniteValue",
+          data: groupedData[year].map((item) => item["exportUniteValue"]),
         },
         {
-          name: "mediumRate",
-          data: groupedData[year].map((item) => item["ratesData"]["mediumRate"]),
-        },
-        {
-          name: "upsetRate",
-          data: groupedData[year].map((item) => item["ratesData"]["upsetRate"]),
+          name: "importUniteValue",
+          data: groupedData[year].map((item) => item["importUniteValue"]),
         },
       ],
     };
   });
-  
+
   console.log(groupedData);
-
-  
-
-  // const data = {
-  //   options: {
-  //     chart: {
-  //       id: "basic-bar",
-  //     },
-  //     xaxis: {
-  //       categories: groupedData['2003'].map((item)=>item['ratesData']['ageInterval']),
-  //     },
-  //   },
-  //   series: [
-  //     {
-  //       name: "happyRate",
-  //       data: groupedData['2003'].map((item)=>item['ratesData']['happyRate']),
-  //     },
-  //     {
-  //       name: "mediumRate",
-  //       data: groupedData['2003'].map((item)=>item['ratesData']['mediumRate']),
-  //     },
-  //     {
-  //       name: "upsetRate",
-  //       data: groupedData['2003'].map((item)=>item['ratesData']['upsetRate']),
-  //     },
-  //   ],
-  // };
 
   return (
     <Container>
