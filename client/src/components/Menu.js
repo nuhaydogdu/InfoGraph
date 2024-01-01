@@ -1,11 +1,11 @@
-import {useState} from 'react'
+import React from 'react'
 import {Container, Row, Col} from "react-bootstrap";
 import EqualizerIcon from '@mui/icons-material/Equalizer';
 function Menu() {
-    const [menu, setMenu] = useState([
-        "Deneme1",
-        "Deneme2",
-        "Deneme3"
+    const menu = ([
+        "Mutluluk",
+        "İhracat Endeksi",
+        "TÜFE"
     ])
   return (
     <Container className='custom-container h-100'>
