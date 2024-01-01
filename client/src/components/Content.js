@@ -6,7 +6,7 @@ function Content() {
   return (
     <Container className='custom-container p-3 h-100'>
         <Row>
-            <Col>Content</Col>
+            <Col><h3 className='d-flex align-items-center justify-content-center'>Content</h3></Col>
         </Row>
         <Row>
           <Col>
