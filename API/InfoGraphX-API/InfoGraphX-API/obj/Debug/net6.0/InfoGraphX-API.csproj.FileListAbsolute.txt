@@ -80,9 +80,6 @@ C:\Users\nuhay\Desktop\scrum_project\InfoGraph\API\InfoGraphX-API\InfoGraphX-API
 C:\Users\nuhay\Desktop\scrum_project\InfoGraph\API\InfoGraphX-API\InfoGraphX-API\obj\Debug\net6.0\InfoGraphX-API.pdb
 C:\Users\nuhay\Desktop\scrum_project\InfoGraph\API\InfoGraphX-API\InfoGraphX-API\obj\Debug\net6.0\InfoGraphX-API.genruntimeconfig.cache
 C:\Users\nuhay\Desktop\scrum_project\InfoGraph\API\InfoGraphX-API\InfoGraphX-API\obj\Debug\net6.0\ref\InfoGraphX-API.dll
-C:\Users\nuhay\Desktop\scrum_project\InfoGraph\API\InfoGraphX-API\InfoGraphX-API\bin\Debug\net6.0\EPPlus.dll
-C:\Users\nuhay\Desktop\scrum_project\InfoGraph\API\InfoGraphX-API\InfoGraphX-API\bin\Debug\net6.0\EPPlus.Interfaces.dll
-C:\Users\nuhay\Desktop\scrum_project\InfoGraph\API\InfoGraphX-API\InfoGraphX-API\bin\Debug\net6.0\EPPlus.System.Drawing.dll
 C:\Users\nuhay\Desktop\scrum_project\InfoGraph\API\InfoGraphX-API\InfoGraphX-API\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll
 C:\Users\nuhay\Desktop\scrum_project\InfoGraph\API\InfoGraphX-API\InfoGraphX-API\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\nuhay\Desktop\scrum_project\InfoGraph\API\InfoGraphX-API\InfoGraphX-API\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
