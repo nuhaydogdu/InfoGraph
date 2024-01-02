@@ -5,7 +5,7 @@
 namespace InfoGraphX_API.Migrations
 {
     /// <inheritdoc />
-    public partial class mig_1 : Migration
+    public partial class mig1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -58,6 +58,21 @@ namespace InfoGraphX_API.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Tufe",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Year = table.Column<int>(type: "int", nullable: false),
+                    Percentage = table.Column<float>(type: "real", nullable: false),
+                    Group = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tufe", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
@@ -83,6 +98,9 @@ namespace InfoGraphX_API.Migrations
 
             migrationBuilder.DropTable(
                 name: "HappinessLevelByAgeGroups");
+
+            migrationBuilder.DropTable(
+                name: "Tufe");
 
             migrationBuilder.DropTable(
                 name: "Users");

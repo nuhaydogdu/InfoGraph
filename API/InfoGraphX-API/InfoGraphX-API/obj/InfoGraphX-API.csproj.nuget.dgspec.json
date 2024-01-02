@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Umut\\Desktop\\bastan\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj": {}
+    "D:\\scrumProject\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Umut\\Desktop\\bastan\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj": {
+    "D:\\scrumProject\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Umut\\Desktop\\bastan\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
+        "projectUniqueName": "D:\\scrumProject\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
         "projectName": "InfoGraphX-API",
-        "projectPath": "C:\\Users\\Umut\\Desktop\\bastan\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
+        "projectPath": "D:\\scrumProject\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
         "packagesPath": "C:\\Users\\Umut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Umut\\Desktop\\bastan\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\obj\\",
+        "outputPath": "D:\\scrumProject\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Umut\\AppData\\Roaming\\NuGet\\NuGet.Config",
