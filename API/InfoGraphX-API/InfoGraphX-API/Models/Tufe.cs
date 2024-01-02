@@ -6,8 +6,8 @@
 
         public int Year { get; set; }
 
-        public float Percentage{ get; set; }
+        public float Percentage { get; set; }
 
-        public string Group{ get; set; }
+        public string Group { get; set; }
     }
 }

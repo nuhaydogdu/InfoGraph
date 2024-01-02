@@ -15,10 +15,10 @@ namespace InfoGraphX_API.Controllers
 
 
         //Foreign trade value indices
-        [HttpPost("importFTVI")]
+        [HttpPost("[action]")]
         public IActionResult ImportFTVIExcelData()
         {
-            var excelFilePath = "C:/Users/Umut/Downloads/FTVI.xls";
+            var excelFilePath = "C:/Users/nuhay/Downloads/FTVI.xls";
             _excelDataImporter.ImportFTVIDataFromExcel(excelFilePath);
 
             return Ok("FTVIE Data import successful");
@@ -26,20 +26,20 @@ namespace InfoGraphX_API.Controllers
 
 
         //Happiness level by age group
-        [HttpPost("HappinessExcel")]
+        [HttpPost("[action]")]
         public IActionResult ImportHLBAGExcelData()
         {
-            var excelFilePath = "C:/Users/Umut/Downloads/HLBAG.xls";
+            var excelFilePath = "C:/Users/nuhay/Downloads/HLBAG.xls";
             _excelDataImporter.ImportHLBAGDataFromExcel(excelFilePath);
 
             return Ok("HLBAG Data import successful");
         }
 
         //TUFE level by age group
-        [HttpPost("ImportTufe")]
+        [HttpPost("[action]")]
         public IActionResult ImportTUFEExcelData()
         {
-            var excelFilePath = "C:/Users/Umut/Downloads/TUFE.xls";
+            var excelFilePath = "C:/Users/nuhay/Downloads/TUFE.xls";
             _excelDataImporter.ImportTUFEDataFromExcel(excelFilePath);
 
             return Ok("TUFE Data import successful");

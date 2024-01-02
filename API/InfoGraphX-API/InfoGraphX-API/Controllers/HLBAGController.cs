@@ -16,23 +16,54 @@ namespace InfoGraphX_API.Controllers
             _dbContext = dbContext;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetHLBAGData()
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetAllHLBAGData()
         {
             try
             {
-                List<HappinessLevelByAgeGroup> hlbagData = await _dbContext.HappinessLevelByAgeGroups.ToListAsync();
+                var result = _dbContext.HappinessLevelByAgeGroups
+                    .Join(_dbContext.HappinesRates,
+                          h => h.HappinesRatesId,
+                          r => r.HappinesRatesId,
+                          (h, r) => new { HappinessData = h, RatesData = r })
+                    .ToList();
 
-                if (hlbagData == null || hlbagData.Count == 0)
-                {
-                    return NotFound("No data found");
-                }
-
-                return Ok(hlbagData);
+                return Ok(result);
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "Internal server error");
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetByYearHLBAGData([FromQuery] int year)
+        {
+            try
+            {
+                var result = _dbContext.HappinessLevelByAgeGroups
+                    .Join(_dbContext.HappinesRates,
+                          h => h.HappinesRatesId,
+                          r => r.HappinesRatesId,
+                          (h, r) => new { HappinessData = h, RatesData = r })
+                    .Where(joinedData => joinedData.HappinessData.Year == year)
+                    .Select(joinedData => new
+                    {
+                        HappinessDataId = joinedData.HappinessData.Id,
+                        Year = joinedData.HappinessData.Year,
+                        HappyRate = joinedData.RatesData.HappyRate,
+                        MediumRate = joinedData.RatesData.MediumRate,
+                        UpsetRate = joinedData.RatesData.UpsetRate,
+                        AgeInterval = joinedData.RatesData.AgeInterval
+                    })
+                    .ToList();
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
     }

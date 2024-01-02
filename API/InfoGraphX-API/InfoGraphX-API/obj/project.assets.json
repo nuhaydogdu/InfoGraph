@@ -4847,11 +4847,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
+      "projectUniqueName": "C:\\Users\\Umut\\Desktop\\bastan\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
       "projectName": "InfoGraphX-API",
-      "projectPath": "D:\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
+      "projectPath": "C:\\Users\\Umut\\Desktop\\bastan\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
       "packagesPath": "C:\\Users\\Umut\\.nuget\\packages\\",
-      "outputPath": "D:\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\obj\\",
+      "outputPath": "C:\\Users\\Umut\\Desktop\\bastan\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Umut\\AppData\\Roaming\\NuGet\\NuGet.Config",

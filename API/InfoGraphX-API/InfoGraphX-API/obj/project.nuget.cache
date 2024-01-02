@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w9AX5RisiTQPZ8zbfPeJl50YbEyFhIrg6UkGIrBpEx5le/3tr4uKNl6AJiKPHZk8UL0ECrigSb/OjiS1OLZ8TQ==",
+  "dgSpecHash": "GIm8o7X88f2ljXoQcS72HZ3TQy8SQQAe5D++gM1LAA0BBkGOH1vAe2N1zANpTTDQ4ZEPeXWg3cLN/c3cRW2uaw==",
   "success": true,
-  "projectFilePath": "D:\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
+  "projectFilePath": "C:\\Users\\Umut\\Desktop\\bastan\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Umut\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Umut\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

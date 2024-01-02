@@ -174,7 +174,7 @@ public class ExcelDataImporter
 
             ISheet sheet = workbook.GetSheetAt(0);
 
-            for (int row = 4; row < 16; row++) 
+            for (int row = 4; row < 16; row++)
             {
                 IRow currentRow = sheet.GetRow(row);
 
