@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoGraphX-API", "InfoGraphX-API\InfoGraphX-API.csproj", "{DC08BE92-F0E6-4F6F-B843-64FCDD21322A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InfoGraphX-API", "InfoGraphX-API\InfoGraphX-API.csproj", "{DC08BE92-F0E6-4F6F-B843-64FCDD21322A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoGraphX-TEST", "InfoGraphX-TEST\InfoGraphX-TEST.csproj", "{888F8E60-9922-46A5-9DCD-16B0971DF25E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DC08BE92-F0E6-4F6F-B843-64FCDD21322A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC08BE92-F0E6-4F6F-B843-64FCDD21322A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC08BE92-F0E6-4F6F-B843-64FCDD21322A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{888F8E60-9922-46A5-9DCD-16B0971DF25E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888F8E60-9922-46A5-9DCD-16B0971DF25E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888F8E60-9922-46A5-9DCD-16B0971DF25E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888F8E60-9922-46A5-9DCD-16B0971DF25E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
