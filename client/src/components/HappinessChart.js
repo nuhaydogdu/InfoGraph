@@ -4,7 +4,8 @@ import Accordion from "react-bootstrap/Accordion";
 import Chart from "react-apexcharts";
 import { resdata } from "../resData/resdataHappiness";
 
-function Graphics() {
+//resdata yı alıcan unutma
+function HappinessChart() {
 
   const groupedData = {};
 
@@ -55,9 +56,9 @@ function Graphics() {
         <Col>
           <Accordion defaultActiveKey={["0"]} alwaysOpen>
             {Object.keys(groupedData).map((year, index) => (
-              <Accordion.Item eventKey={index}>
-                <Accordion.Header>{year}</Accordion.Header>
-                <Accordion.Body>
+              <Accordion.Item key={year} eventKey={index}>
+                <Accordion.Header><strong className="ps-3">{year} yılı</strong></Accordion.Header>
+                <Accordion.Body className='d-flex align-items-center justify-content-center'>
                   <Chart
                     options={groupedData[year].data.options}
                     series={groupedData[year].data.series}
@@ -74,4 +75,4 @@ function Graphics() {
   );
 }
 
-export default Graphics;
+export default HappinessChart;
