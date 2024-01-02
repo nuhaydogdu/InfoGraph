@@ -4392,11 +4392,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nuhay\\Desktop\\scrum_project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
+      "projectUniqueName": "C:\\Users\\nuhay\\Desktop\\SWE_Project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
       "projectName": "InfoGraphX-API",
-      "projectPath": "C:\\Users\\nuhay\\Desktop\\scrum_project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
+      "projectPath": "C:\\Users\\nuhay\\Desktop\\SWE_Project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
       "packagesPath": "C:\\Users\\nuhay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nuhay\\Desktop\\scrum_project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\obj\\",
+      "outputPath": "C:\\Users\\nuhay\\Desktop\\SWE_Project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
