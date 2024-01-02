@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nuhay\\Desktop\\scrum_project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-TEST\\InfoGraphX-TEST.csproj": {}
+    "C:\\Users\\nuhay\\Desktop\\SWE_Project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-TEST\\InfoGraphX-TEST.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nuhay\\Desktop\\scrum_project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj": {
+    "C:\\Users\\nuhay\\Desktop\\SWE_Project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nuhay\\Desktop\\scrum_project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
+        "projectUniqueName": "C:\\Users\\nuhay\\Desktop\\SWE_Project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
         "projectName": "InfoGraphX-API",
-        "projectPath": "C:\\Users\\nuhay\\Desktop\\scrum_project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
+        "projectPath": "C:\\Users\\nuhay\\Desktop\\SWE_Project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj",
         "packagesPath": "C:\\Users\\nuhay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nuhay\\Desktop\\scrum_project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\obj\\",
+        "outputPath": "C:\\Users\\nuhay\\Desktop\\SWE_Project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -90,14 +90,14 @@
         }
       }
     },
-    "C:\\Users\\nuhay\\Desktop\\scrum_project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-TEST\\InfoGraphX-TEST.csproj": {
+    "C:\\Users\\nuhay\\Desktop\\SWE_Project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-TEST\\InfoGraphX-TEST.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nuhay\\Desktop\\scrum_project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-TEST\\InfoGraphX-TEST.csproj",
+        "projectUniqueName": "C:\\Users\\nuhay\\Desktop\\SWE_Project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-TEST\\InfoGraphX-TEST.csproj",
         "projectName": "InfoGraphX-TEST",
-        "projectPath": "C:\\Users\\nuhay\\Desktop\\scrum_project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-TEST\\InfoGraphX-TEST.csproj",
+        "projectPath": "C:\\Users\\nuhay\\Desktop\\SWE_Project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-TEST\\InfoGraphX-TEST.csproj",
         "packagesPath": "C:\\Users\\nuhay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nuhay\\Desktop\\scrum_project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-TEST\\obj\\",
+        "outputPath": "C:\\Users\\nuhay\\Desktop\\SWE_Project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-TEST\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -118,8 +118,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\nuhay\\Desktop\\scrum_project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj": {
-                "projectPath": "C:\\Users\\nuhay\\Desktop\\scrum_project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj"
+              "C:\\Users\\nuhay\\Desktop\\SWE_Project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj": {
+                "projectPath": "C:\\Users\\nuhay\\Desktop\\SWE_Project\\InfoGraph\\API\\InfoGraphX-API\\InfoGraphX-API\\InfoGraphX-API.csproj"
               }
             }
           }

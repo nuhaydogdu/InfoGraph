@@ -2,10 +2,10 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import Chart from "react-apexcharts";
-import { resdata } from "../resData/resdataTufe";
+// import { resdata } from "../resData/resdataTufe";
 
 //resdata yı alıcan unutma
-function TufeChart() {
+function TufeChart({ resdata }) {
   console.log(resdata);
   const groupedData = {};
 
@@ -52,8 +52,10 @@ function TufeChart() {
           <Accordion defaultActiveKey={["0"]} alwaysOpen>
             {Object.keys(groupedData).map((year, index) => (
               <Accordion.Item key={year} eventKey={index}>
-                <Accordion.Header><strong className="ps-3">{year} yılı</strong></Accordion.Header>
-                <Accordion.Body className='d-flex align-items-center justify-content-center'>
+                <Accordion.Header>
+                  <strong className="ps-3">{year} yılı</strong>
+                </Accordion.Header>
+                <Accordion.Body className="d-flex align-items-center justify-content-center">
                   <Chart
                     options={groupedData[year].data.options}
                     series={groupedData[year].data.series}

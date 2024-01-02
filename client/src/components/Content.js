@@ -6,7 +6,7 @@ import ForeignTradeChart from "./ForeignTradeChart";
 import TufeChart from "./TufeChart";
 import Project from "./Project";
 
-function Content({resdata}) {
+function Content({ resdata }) {
   const location = useLocation();
   console.log("location --> ", location);
 
@@ -39,11 +39,18 @@ function Content({resdata}) {
       </Row>
       <Row>
         <Col>
+          {/* <HappinessChart /> */}
           <Routes>
             <Route path="/" element={<Project />} />
-            <Route path="/hapinness" element={<HappinessChart resdata={resdata}/>} />
-            <Route path="/foregin" element={<ForeignTradeChart resdata={resdata}/>} />
-            <Route path="/tufe" element={<TufeChart resdata={resdata}/>} />
+            <Route
+              path="/hapinness"
+              element={<HappinessChart resdata={resdata} />}
+            />
+            <Route
+              path="/foregin"
+              element={<ForeignTradeChart resdata={resdata} />}
+            />
+            <Route path="/tufe" element={<TufeChart resdata={resdata} />} />
           </Routes>
         </Col>
       </Row>
