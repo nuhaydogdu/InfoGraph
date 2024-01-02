@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoGraphX_API.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20231222135212_mig_2")]
-    partial class mig_2
+    [Migration("20240102101550_mig_1")]
+    partial class mig_1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,6 +50,53 @@ namespace InfoGraphX_API.Migrations
                     b.ToTable("ForeignTradeValueIndices");
                 });
 
+            modelBuilder.Entity("InfoGraphX_API.Models.HappinesRates", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AgeInterval")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("HappinesRatesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("HappyRate")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MediumRate")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UpsetRate")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HappinesRates");
+                });
+
+            modelBuilder.Entity("InfoGraphX_API.Models.HappinessLevelByAgeGroup", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("HappinesRatesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HappinessLevelByAgeGroups");
+                });
+
             modelBuilder.Entity("InfoGraphX_API.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -58,8 +105,13 @@ namespace InfoGraphX_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
+                    b.Property<string>("AgeGroup")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ViewedTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

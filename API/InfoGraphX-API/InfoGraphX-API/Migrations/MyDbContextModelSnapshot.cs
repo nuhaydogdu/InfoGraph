@@ -94,6 +94,29 @@ namespace InfoGraphX_API.Migrations
                     b.ToTable("HappinessLevelByAgeGroups");
                 });
 
+            modelBuilder.Entity("InfoGraphX_API.Models.Tufe", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Group")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("Percentage")
+                        .HasColumnType("real");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tufe");
+                });
+
             modelBuilder.Entity("InfoGraphX_API.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -102,8 +125,13 @@ namespace InfoGraphX_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
+                    b.Property<string>("AgeGroup")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ViewedTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

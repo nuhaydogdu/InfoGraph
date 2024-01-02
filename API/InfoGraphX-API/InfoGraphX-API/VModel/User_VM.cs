@@ -1,8 +1,7 @@
-﻿namespace InfoGraphX_API.Models
+﻿namespace InfoGraphX_API.VModel
 {
-    public class User
+    public class User_VM
     {
-        public int Id { get; set; }
         public string AgeGroup { get; set; }
         public string ViewedTitle { get; set; }
     }

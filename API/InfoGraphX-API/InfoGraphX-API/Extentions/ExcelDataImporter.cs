@@ -165,4 +165,31 @@ public class ExcelDataImporter
             _dbContext.SaveChanges();
         }
     }
+
+    public void ImportTUFEDataFromExcel(string excelFilePath)
+    {
+        using (FileStream file = new FileStream(excelFilePath, FileMode.Open, FileAccess.Read))
+        {
+            HSSFWorkbook workbook = new HSSFWorkbook(file);
+
+            ISheet sheet = workbook.GetSheetAt(0);
+
+            for (int row = 4; row < 16; row++)
+            {
+                IRow currentRow = sheet.GetRow(row);
+
+                for (int i = 2014; i < 2024; i++)
+                {
+                    _dbContext.Tufe.Add(new Tufe
+                    {
+                        Year = i,
+                        Percentage = Convert.ToSingle(currentRow.GetCell(i - 2011).NumericCellValue),
+                        Group = currentRow.GetCell(1).StringCellValue
+                    });
+                }
+            }
+
+            _dbContext.SaveChanges();
+        }
+    }
 }

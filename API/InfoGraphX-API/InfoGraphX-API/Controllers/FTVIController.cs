@@ -18,8 +18,8 @@ namespace InfoGraphX_API.Controllers
             _dbContext = dbContext;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetFTVIData()
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetAllFTVIData()
         {
             try
             {
@@ -31,6 +31,26 @@ namespace InfoGraphX_API.Controllers
                 }
 
                 return Ok(ftviData);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetByYearFTVIData([FromQuery] int year)
+        {
+            try
+            {
+                List<ForeignTradeValueIndice> ftviYearData = await _dbContext.ForeignTradeValueIndices.Where(f => f.Year == year).ToListAsync();
+
+                if (ftviYearData == null || ftviYearData.Count == 0)
+                {
+                    return NotFound("No data found");
+                }
+
+                return Ok(ftviYearData);
             }
             catch (Exception ex)
             {
