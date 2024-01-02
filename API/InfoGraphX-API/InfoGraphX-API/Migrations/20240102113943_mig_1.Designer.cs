@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoGraphX_API.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20240102113107_mig1")]
-    partial class mig1
+    [Migration("20240102113943_mig_1")]
+    partial class mig_1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
