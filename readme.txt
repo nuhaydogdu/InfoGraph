@@ -1,9 +1,5 @@
 Software Engineering Project
-...
-UMUT WAS HERE
-Nuh geldi
-SCE gelmişke..
-Eray Ağarer was here...
+
 
 //DEĞİŞTİRİLEMESİ GEREKEN YERLER HERKESİN
 1-API
