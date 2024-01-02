@@ -1,3 +1,4 @@
+import {useState} from "react";
 import "./App.css";
 import {Container, Row, Col} from "react-bootstrap";
 import Navbar from "./components/Navbar";
@@ -6,7 +7,7 @@ import Footer from "./components/Footer";
 import Content from "./components/Content";
 
 function App() {
-  
+  const [resdata, setResData] = useState([]);
   return (
     <Container className="mt-3">
 
@@ -20,10 +21,10 @@ function App() {
       {/* content and menu */}
       <Row className="mb-3">
         <Col sm={3}>
-          <Menu />
+          <Menu setResData={setResData}/>
         </Col>
         <Col>
-          <Content />
+          <Content resdata={resdata}/>
         </Col>
       </Row>
 
