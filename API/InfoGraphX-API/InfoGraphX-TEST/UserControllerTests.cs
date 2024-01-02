@@ -25,8 +25,14 @@ public class UserControllerTests
         {
             var controller = new UserController(dbContext);
 
-            var users = new List<User> { new User { AgeGroup = "18-25", ViewedTitle = "SampleTitle" } };
-            dbContext.Users.AddRange(users);
+            var userList = new List<User>
+            {
+                new User { AgeGroup = "15-20", ViewedTitle = "Yaş Grubuna Göre Mutluluk Düzeyleri" },
+                new User { AgeGroup = "55-60", ViewedTitle = "TÜFE" }
+                // Add other test data as needed
+            };
+
+            dbContext.Users.AddRange(userList);
             dbContext.SaveChanges();
 
             // Act
@@ -37,14 +43,19 @@ public class UserControllerTests
             Assert.Equal(200, result.StatusCode);
 
             var resultList = Assert.IsType<List<User>>(result.Value);
-            Assert.Single(resultList);
-            Assert.Equal("18-25", resultList[0].AgeGroup);
-            Assert.Equal("SampleTitle", resultList[0].ViewedTitle);
+            Assert.NotEmpty(resultList);
+
+            // Add more specific assertions based on your data
+            Assert.Equal("25-30", resultList[0].AgeGroup);
+            Assert.Equal("Test Title", resultList[0].ViewedTitle);
+
+            Assert.Equal("15-20", resultList[1].AgeGroup);
+            Assert.Equal("Yaş Grubuna Göre Mutluluk Düzeyleri", resultList[1].ViewedTitle);
         }
     }
 
     [Fact]
-    public async Task PostUser_ValidData_ReturnsOkResult()
+    public async Task PostUser_AddsUserToDatabase()
     {
         // Arrange
         // Use an in-memory database for testing
@@ -56,7 +67,7 @@ public class UserControllerTests
         {
             var controller = new UserController(dbContext);
 
-            var userVM = new User_VM { AgeGroup = "18-25", ViewedTitle = "SampleTitle" };
+            var userVM = new User_VM { AgeGroup = "25-30", ViewedTitle = "Test Title" };
 
             // Act
             var result = await controller.PostUser(userVM) as OkResult;
@@ -64,6 +75,12 @@ public class UserControllerTests
             // Assert
             Assert.NotNull(result);
             Assert.Equal(200, result.StatusCode);
+
+            // Check if the user is added to the database
+            var addedUser = await dbContext.Users.FirstOrDefaultAsync(u => u.AgeGroup == userVM.AgeGroup && u.ViewedTitle == userVM.ViewedTitle);
+            Assert.NotNull(addedUser);
+            Assert.Equal("25-30", addedUser.AgeGroup);
+            Assert.Equal("Test Title", addedUser.ViewedTitle);
         }
     }
 }
