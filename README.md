@@ -5,9 +5,9 @@ This project includes a comprehensive database and web-based platform specially 
 
 ## Features
 
-- Collecting and reporting statistics in the TURKSTAT system.
+- Collecting and reporting statistics in the TUIK system.
 - The opportunity for users to query data related to their activities.
-- Transferring Excel files downloaded from TURKSTAT system to the database of the application.
+- Transferring Excel files downloaded from TUIK system to the database of the application.
 - Dynamic rotation of data according to user demands.
 
 ## Used technologies
